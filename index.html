@@ -1,14 +1,25 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Annotate Mate</title>
-  </head>
-  <body>
-  <div id="annotation"></div>
-  <form action="annotate.js">
-      Source Name:<br>
-      <input type="text"><br>
-      <input type="submit" value="Submit">
-  </form> 
+<head>
+  <title>Annotate Mate</title>
+</head>
+<body>
 
-  </body>
+<div id="annotation"></div>
+
+<form id="annotate">
+  Name of Source: <input type="text"><br>
+  <input type="button" onclick="submit()" value="Submit">
+</form>
+
+<script>
+function myFunction() {
+    var name = document.getElementById("annotate").elements[0];
+    document.getElementById("annotation").innerHTML = ("<h1>" + name "</h1>" +
+    "<p>" +
+    "This source is #. It is useful because it allows you to obtain important info regarding #.").replace(/#/g, name)
+}
+</script>
+
+</body>
 </html>
