@@ -17,6 +17,7 @@
 $("#annotate").submit(function(e) {
     e.preventDefault();
     var name = document.getElementById("annotate").elements[0];
+    console.log(name);
     document.getElementById("annotation").innerHTML = ("<h1>" + name + "</h1>" + "<p>" + "This source is #. It is useful because it allows you to obtain important info regarding #.</p>").replace(/#/g, name)
 })
 </script>
